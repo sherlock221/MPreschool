@@ -4,6 +4,7 @@
  * 所需类库
  * @sherlock221b
  */
+
 var MPreschool = angular.module('MPreschool', [
     'ui.router',
     'ngAnimate',

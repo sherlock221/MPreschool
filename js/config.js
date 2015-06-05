@@ -4,11 +4,11 @@
 
 
 //常量配置
-Micro.constant("VERSION",{
+MPreschool.constant("VERSION",{
     vs : "100"
 });
 
-Micro.constant("SERVER", {
+MPreschool.constant("SERVER", {
     url : {
         uc  : "",
         message : "",
@@ -28,16 +28,16 @@ Micro.constant("SERVER", {
 });
 
 //配置http 拦截器
-Micro.config(function($httpProvider){
+MPreschool.config(function($httpProvider){
     $httpProvider.interceptors.push("AjaxInterceptors");
 });
 
 
-Micro.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+MPreschool.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = true;
 }])
 
 //启动项
-Micro.run(function($rootScope,VERSION){
+MPreschool.run(function($rootScope,VERSION){
     $rootScope.VERSION = VERSION;
 });

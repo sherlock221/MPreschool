@@ -2,7 +2,7 @@
  * angularJS http拦截器
  */
 
-Micro
+MPreschool
     .factory("AjaxInterceptors",function(cfpLoadingBar){
         return {
             //成功请求

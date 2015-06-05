@@ -16,104 +16,66 @@ Micro.config(
                   templateUrl: 'tpl/app.html?v='+VERSION.vs
               })
 
-              //默认皮肤
-              .state('app.s1', {
-                  url: '/s1',
-                  templateUrl: 'tpl/skin/skin-one.html?v='+VERSION.vs
+              .state("app.fun",{
+                  url: '/fun',
+                  templateUrl: 'tpl/function/fun.html?v='+VERSION.vs
+              })
+              .state('app.auth', {
+                  url: '/auth',
+                  abstract : true,
+              })
+
+
+
+              //登录页面
+              .state('app.auth.login', {
+                  url: '/login',
+                  views : {
+                      "@" : {
+                          templateUrl: 'tpl/auth/login.html?v='+VERSION.vs
+                      }
+                  }
                })
 
-              //list
-              .state('app.s1.list',{
-                  url: '/list',
-                  abstract : true
-              })
-
-              //文字列表
-              .state('app.s1.list.text',{
-                  url: '/text',
-                  views: {
-                      "@app.s1": {
-                          templateUrl: 'tpl/list/list-text.html?v='+VERSION.vs
-                      }
-                  }
-
-              })
-
-              .state('app.s1.list.image',{
-                  url: '/image',
-                  views: {
-                      "@app.s1": {
-                          templateUrl: 'tpl/list/list-image.html?v='+VERSION.vs
-                      }
-                  }
-
-              })
-
-              .state('app.s1.list.card',{
-                  url: '/card',
-                  views: {
-                      "@app.s1": {
-                          templateUrl: 'tpl/list/list-card.html?v='+VERSION.vs
-                      }
-                  }
-              })
-
-              //menu
-              .state('app.s1.menu',{
-                  url: '/menu',
-                  abstract : true
-              })
-
-
-              //图标 menu
-              .state('app.s1.menu.icon',{
-                  url: '/icon',
-                  views: {
-                      "@app.s1": {
-                          controller : "MenuIconCtrl",
-                          templateUrl: 'tpl/menu/menu-icon.html?v='+VERSION.vs
-                      }
-                  }
-
-              })
-              //自定义 menu
-              .state('app.s1.menu.custom',{
-                  url: '/icon',
-                  templateUrl: 'tpl/menu/menu-custom.html?v='+VERSION.vs
-              })
-
-
-
-              //detai 图文混排
-              .state('app.detail',{
-                  url: '/detail',
-                  abstract: true
-              })
-              .state('app.detail.imgText',{
-                  url: '/imgText',
+              //注册
+              .state('app.auth.register', {
+                  url: '/register',
                   views : {
-                      "@app" : {
-                          templateUrl: 'tpl/detail/detail-imgText.html?v='+VERSION.vs
-                      }
-                  }
-              })
-
-              //第三方
-              .state('app.contact',{
-                  url: '/contact',
-                  views : {
-                      "@app" : {
-                          templateUrl: 'tpl/third/contact.html?v='+VERSION.vs
+                      "@" : {
+                          templateUrl: 'tpl/auth/register.html?v='+VERSION.vs
                       }
                   }
               })
 
               //首页
-              .state('app.s1.index',{
+              .state('app.fun.index',{
                   url: '/index',
-                  templateUrl: 'tpl/index/index.html?v='+VERSION.vs
+                  templateUrl: 'tpl/function/index/index.html?v='+VERSION.vs,
+                  controller : ""
+              })
 
-              });
+              //自定义菜单
+              .state('app.fun.menu',{
+                  url: '/menu',
+                  templateUrl: 'tpl/function/menu/menu.html?v='+VERSION.vs,
+                  controller : ""
+              })
+
+              //微官网
+              .state('app.fun.micro',{
+                  url: '/micro',
+                  templateUrl: 'tpl/function/micro/micro.html?v='+VERSION.vs,
+                  controller : ""
+              })
+
+              //自动回复
+              .state('app.fun.reply',{
+                  url: '/reply',
+                  templateUrl: 'tpl/function/replay/replay.html?v='+VERSION.vs,
+                  controller : ""
+              })
+
+
 
           //index
           $urlRouterProvider.otherwise('/app/s1/index');
