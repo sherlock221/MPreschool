@@ -8,10 +8,20 @@
 var MPreschool = angular.module('MPreschool', [
     'ui.router',
     'ngAnimate',
-    'ui.bootstrap',
     'angular-loading-bar',
-    "focusOn",
+    'ui.bootstrap',
     "toastr",
+    "focusOn",
     "ngFileUpload",
-    'mwl.confirm'
+    "mwl.confirm"
+
+
 ]);
+
+
+
+
+
+
+
+

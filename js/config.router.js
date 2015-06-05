@@ -5,11 +5,9 @@
  * 配置路由
  * @sherlock221b
  */
-Micro.config(
+MPreschool.config(
       function ($stateProvider,   $urlRouterProvider,VERSION) {
-
           $stateProvider
-
               .state('app', {
                   url: '/app',
                   abstract : true,
@@ -22,10 +20,8 @@ Micro.config(
               })
               .state('app.auth', {
                   url: '/auth',
-                  abstract : true,
+                  abstract : true
               })
-
-
 
               //登录页面
               .state('app.auth.login', {
@@ -84,9 +80,8 @@ Micro.config(
                   url:'/account'
               })
 
-
-          //index
-          $urlRouterProvider.otherwise('/app/s1/index');
+          //login
+          $urlRouterProvider.otherwise('/app/auth/login');
 
       }
   );
