@@ -57,13 +57,19 @@
 
 
 
-
     <!-- 打包业务-->
     <!--<script type="text/javascript" src="dist/js/all.js?v=8.3"></script>-->
 
 </head>
 
 <body ng-app="MPreschool" ng-controller="MainCtrl">
+
+    <header ng-include="'tpl/common/header.html'"></header>
+
     <section ui-view></section>
+
+    <footer ng-include="'tpl/common/footer.html'"></footer>
+
+
 </body>
 </html>

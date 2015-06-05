@@ -43,10 +43,10 @@ MPreschool.config(
                   }
               })
 
-              //首页
-              .state('app.fun.index',{
-                  url: '/index',
-                  templateUrl: 'tpl/function/index/index.html?v='+VERSION.vs,
+
+              .state('app.fun',{
+                  url: '/fun',
+                  templateUrl: 'tpl/function/fun.html?v='+VERSION.vs,
                   controller : ""
               })
 
