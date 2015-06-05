@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="lib/angular/loadingBar/lbar.black.css" />
     <!-- skin -->
-    <link rel="stylesheet"   href="lib/css/base/module.css" />
+    <link rel="stylesheet" type="text/css"   href="lib/bootstrap/less/bootstrap.css" />
     <link rel="stylesheet"   href="css/all.css" />
 
 
@@ -22,6 +22,10 @@
     <script type="text/javascript" src="lib/angular/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="lib/angular/angular-animate.min.js"></script>
     <script type="text/javascript" src="lib/angular/loadingBar/loading-bar.min.js"></script>
+
+    <!-- bootstrap -->
+    <script type="text/javascript" src="lib/bootstrap/ng/ui-bootstrap-tpls-0.13.0.min.js"></script>
+
 
     <!-- 配置 -->
     <script type="text/javascript"  src="js/app.js"></script>
@@ -32,19 +36,7 @@
     <!-- 拦截器 -->
     <script type="text/javascript" src="js/services/interceptors/ajaxInterceptors.js"></script>
 
-    <link rel="stylesheet" href="js/dirs/imglazy.css" />
-    <script type="text/javascript" src="js/dirs/imglazy.dir.js"></script>
-    <!-- 模板 -->
-    <script  type="text/javascript" src="js/controllers/base/main.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/index/index.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.card.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.image.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/list/list.text.ctrl.js"></script>
 
-
-    <script  type="text/javascript" src="js/controllers/menu/menu.custome.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/menu/menu.icon.ctrl.js"></script>
-    <script  type="text/javascript" src="js/controllers/detail/detail.imgText.ctrl.js"></script>
 
 
 
@@ -56,19 +48,4 @@
 <body ng-app="Micro" ng-controller="MainCtrl">
     <section ui-view></section>
 </body>
-<script>
-    (function (doc, win) {
-        var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function () {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) return;
-                    docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-                };
-
-        if (!doc.addEventListener) return;
-        win.addEventListener(resizeEvt, recalc, false);
-        doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-</script>
 </html>

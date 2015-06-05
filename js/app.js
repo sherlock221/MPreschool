@@ -7,5 +7,6 @@
 var Micro = angular.module('Micro', [
     'ui.router',
     'ngAnimate',
+    'ui.bootstrap',
     'angular-loading-bar'
 ]);
