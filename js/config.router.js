@@ -58,14 +58,14 @@ Micro.config(
               .state('app.fun.menu',{
                   url: '/menu',
                   templateUrl: 'tpl/function/menu/menu.html?v='+VERSION.vs,
-                  controller : ""
+                  controller : "SelfMenuCtrl"
               })
 
               //微官网
               .state('app.fun.micro',{
                   url: '/micro',
                   templateUrl: 'tpl/function/micro/micro.html?v='+VERSION.vs,
-                  controller : ""
+                  controller : "MicroContentCtrl"
               })
 
               //自动回复
@@ -74,7 +74,11 @@ Micro.config(
                   templateUrl: 'tpl/function/replay/replay.html?v='+VERSION.vs,
                   controller : ""
               })
-
+             //内容管理
+              .state('app.fun.content',{
+                  url:'/content',
+                  templateUrl:'tpl/function/'
+              })
 
 
           //index
