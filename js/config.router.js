@@ -44,12 +44,6 @@ MPreschool.config(
               })
 
 
-              .state('app.fun',{
-                  url: '/fun',
-                  templateUrl: 'tpl/function/fun.html?v='+VERSION.vs,
-                  controller : ""
-              })
-
               //自定义菜单
               .state('app.fun.menu',{
                   url: '/menu',
