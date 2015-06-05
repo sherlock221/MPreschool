@@ -43,12 +43,11 @@ MPreschool.config(
                   }
               })
 
-
               //自定义菜单
               .state('app.fun.menu',{
                   url: '/menu',
-                  templateUrl: 'tpl/function/menu/menu.html?v='+VERSION.vs,
-                  controller : "SelfMenuCtrl"
+                  templateUrl: 'tpl/function/menu/menu.html?v='+VERSION.vs
+                  //controller : "SelfMenuCtrl"
               })
 
               //微官网
@@ -75,7 +74,7 @@ MPreschool.config(
               })
 
           //login
-          $urlRouterProvider.otherwise('/app/auth/login');
+          $urlRouterProvider.otherwise('/app/fun/menu');
 
       }
   );

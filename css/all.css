@@ -7,6 +7,23 @@
  * sherlock221b
  * 动画部分常用
  */
+/**
+ * sherlock221b
+ * table布局方式
+ */
+.tb-box {
+  display: table; }
+  .tb-box .tb-row {
+    display: table-row; }
+  .tb-box .tb-col {
+    display: table-cell; }
+  .tb-box .tb-vt {
+    vertical-align: top; }
+  .tb-box .tb-mt {
+    vertical-align: middle; }
+  .tb-box .tb-bt {
+    vertical-align: bottom; }
+
 .bg-light-green {
   background: #90c124; }
 
@@ -113,5 +130,30 @@
   background-size: 100% 100%;
   width: 11.05067rem;
   height: 4.032rem; }
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/**
+ * sherlock221b
+ */
+.menu-layer {
+  border: 1px solid #e7e7eb;
+  background-color: #fff; }
+  .menu-layer .menu-content {
+    min-height: 300px; }
+    .menu-layer .menu-content .menu-left {
+      border-right: 1px solid #e7e7eb; }
+      .menu-layer .menu-content .menu-left .menu-list li {
+        border-bottom: 1px solid #e7e7eb; }
+        .menu-layer .menu-content .menu-left .menu-list li a {
+          display: block; }
+  .menu-layer .menu-bottom {
+    background: #f4f5f9;
+    padding: 12px 16px;
+    border-top: 1px solid #e7e7eb;
+    text-align: center; }
 
 /*# sourceMappingURL=all.css.map */

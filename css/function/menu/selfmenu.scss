@@ -1,0 +1,47 @@
+/**
+ * sherlock221b
+ */
+
+$bg-light-gray : #f4f5f9;
+$border-light-gray : #e7e7eb;
+
+
+
+
+
+.menu-layer{
+
+  border: 1px solid $border-light-gray;
+  background-color: #fff;
+
+   .menu-content{
+     min-height: 300px;
+
+     .menu-left{
+
+          border-right: 1px solid $border-light-gray;
+
+       .menu-list-nav{
+
+       }
+        .menu-list{
+          li{
+            border-bottom: 1px solid $border-light-gray;
+            a{
+              display: block;
+            }
+          }
+        }
+     }
+
+     .menu-right{
+     }
+   }
+
+   .menu-bottom{
+      background: $bg-light-gray;
+      padding: 12px 16px;
+      border-top: 1px solid $border-light-gray;
+      text-align: center;
+   }
+}
