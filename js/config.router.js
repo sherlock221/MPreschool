@@ -77,7 +77,11 @@ Micro.config(
              //内容管理
               .state('app.fun.content',{
                   url:'/content',
-                  templateUrl:'tpl/function/'
+                  templateUrl:'tpl/function/content/content.html?v='+VERSION.vs,
+              })
+            //账号管理
+              .state('app.fun.account',{
+                  url:'/account'
               })
 
 
