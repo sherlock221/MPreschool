@@ -10,14 +10,12 @@ MPreschool.constant("VERSION",{
 
 MPreschool.constant("SERVER", {
     url : {
-        uc  : "",
-        message : "",
-        push : "",
-        sop  : ""
+        file : "",
+        mp  : ""
     },
     //测试
     testUrl : {
-        mp  : "./data",
+        mp  : "/MPreschool/data",
         file : "http://10.10.68.11:10000/file"
     },
     //预发布

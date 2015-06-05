@@ -6,7 +6,7 @@
 MPreschool.controller("MainCtrl",function($rootScope,$scope,$modal,SERVER,$state,Util,toastrConfig,toastr,VERSION){
 
     //当前环境
-    $rootScope.url = SERVER.testUrl;
+    SERVER.url = SERVER.testUrl;
 
     //toast
     toastrConfig.positionClass = "toast-bottom-center";

@@ -5,7 +5,7 @@
 $bg-light-gray : #f4f5f9;
 $border-light-gray : #e7e7eb;
 
-
+$min-height : 530px;
 
 
 
@@ -15,26 +15,117 @@ $border-light-gray : #e7e7eb;
   background-color: #fff;
 
    .menu-content{
-     min-height: 300px;
+     min-height: $min-height;
 
      .menu-left{
-
+          min-height: $min-height;
           border-right: 1px solid $border-light-gray;
+          padding-right: 0;
 
-       .menu-list-nav{
+            .menu-list-nav{
+              background: $bg-light-gray;
+              padding: 0px 12px;
+              height: 41px;
 
-       }
-        .menu-list{
-          li{
-            border-bottom: 1px solid $border-light-gray;
-            a{
-              display: block;
+              width: 100%;
+              border-bottom : 1px solid $border-light-gray;
             }
-          }
-        }
+
+            .menu-list{
+              .menu-item-list{
+
+                .dot{
+                  color: #d5d5d5;
+                  font-size: 10px;
+                  margin-right: 6px;
+                }
+                &>li{
+                  &>a{
+                    display: block;
+                    padding-left: 36px;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    &:hover{
+                      background: $bg-light-gray;
+                    }
+                    &.active{
+                      background: $bg-light-gray;
+                    }
+                  }
+                }
+
+              }
+
+              .menu-op{
+                float: right;
+                position: relative;
+                top : -1px;
+                padding-right: 13px;
+              }
+
+              &>li{
+
+                border-bottom: 1px solid $border-light-gray;
+
+                &>a{
+                  display: block;
+                  padding-left: 20px;
+                  padding-top: 6px;
+                  padding-bottom: 6px;
+
+                  &:hover{
+                    background: $bg-light-gray;
+                  }
+
+                  &.active{
+                    background: $bg-light-gray;
+                  }
+                }
+              }
+            }
      }
 
      .menu-right{
+       min-height: $min-height;
+       padding-left: 0;
+
+        .menu-right-top{
+          width: 100%;
+          background: $bg-light-gray;
+          padding: 10px 12px;
+          border-bottom: 1px solid $border-light-gray;
+
+        }
+
+       .menu-types{
+         text-align: center;
+          .dc{
+            padding-top: 80px;
+            color: #8d8d8d;
+            padding-bottom : 60px;
+           }
+
+         a{
+           margin-right: 35px;
+           i{
+             margin-bottom: 5px;
+           }
+
+           &:last-child{
+             margin-right: 0;
+           }
+         }
+
+
+       }
+
+       .no-menu-select{
+         text-align: center;
+         p{
+           padding-top: 80px;
+           color: #8d8d8d;
+         }
+       }
      }
    }
 

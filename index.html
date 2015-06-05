@@ -47,12 +47,16 @@
 
     <!-- 控制器 -->
     <script type="text/javascript" src="js/controller/main.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/menu/selfmenu.ctrl.js"></script>
+    <script type="text/javascript" src="js/controller/function/menu/selfmenu.add.ctrl.js"></script>
 
 
     <!-- 服务 -->
     <script type="text/javascript" src="js/services/common/util.sev.js"></script>
     <script type="text/javascript" src="lib/ng/ng-file-upload-all.min.js"></script>
     <script type="text/javascript" src="lib/ng/angular-bootstrap-confirm.min.js"></script>
+
+    <script type="text/javascript" src="js/services/menu/menu.sev.js"></script>
 
     <!-- 打包业务-->
     <!--<script type="text/javascript" src="dist/js/all.js?v=8.3"></script>-->
@@ -61,11 +65,11 @@
 
 <body ng-app="MPreschool" ng-controller="MainCtrl">
 
-    <header ng-include="'tpl/common/header.html'"></header>
+    <!--<header ng-include="'tpl/common/header.html'"></header>-->
 
     <section ui-view></section>
 
-    <footer ng-include="'tpl/common/footer.html'"></footer>
+    <!--<footer ng-include="'tpl/common/footer.html'"></footer>-->
 
 
 </body>

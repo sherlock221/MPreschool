@@ -1,34 +1,92 @@
 <section>
 
     <div class="menu-layer">
-        <div class="menu-content">
-            <div class="menu-left">
-                <div class="menu-list-nav tb-box">
+        <div class="menu-content row">
+            <div class="menu-left col-md-4">
+                <div class="menu-list-nav tb-box ">
                     <div class="tb-row">
-                        <span class="tb-col">菜单管理</span>
-                        <div class="tb-col">
-                            <i class="hidden-val">+</i>
-                            <i class="hidden-val">-</i>
+                        <span class="tb-col tb-mt">菜单管理</span>
+                        <div class="tb-col tb-mt text-right" ng-hide="sort">
+                            <i class=" ib  icon icon-opr-add mr10" ng-click="addMenu();"></i>
+                            <i class=" ib icon icon-opr-menu" ng-click="sortMenu();"></i>
+                        </div>
+
+                        <div class="tb-col text-right tb-mt" ng-show="sort">
+                            <button class="btn btn-success btn-sm mr10">完成</button>
+                            <button class="btn btn-default btn-sm" ng-click="closeSort();">取消</button>
                         </div>
                     </div>
-
                 </div>
-                <ul class="menu-list">
-                    <li>
-                        <a href="javascript:void(0);">
-                            官网下载
-                            <i class="">+   </i>
+                <ul class="menu-list" >
+                    <li ng-repeat="menu in menus">
+                        <a class="active" href="javascript:void(0);">
+                            {{menu.name ? menu.name : "默认菜单"}}
+                            <div class="menu-op clearFix">
+                                <i class="ib icon icon-14-opr-add"  ng-hide="sort"></i>
+                                <i class="ib icon icon-14-opr-menu" ng-if="sort"></i>
+                            </div>
                         </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">回看经典</a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">历史消息</a>
+
+                        <!-- 有二级菜单 -->
+                        <ul class="menu-item-list" ng-if="menu.sub_button.length > 0">
+                            <li ng-repeat="sub in menu.sub_button">
+                                <a class="" href="javascript:void(0);">
+                                    <i class="dot ib">●</i>{{sub.name}}
+                                    <div class="menu-op clearFix">
+                                        <i class="ib icon icon-14-opr-menu" ng-if="sort"></i>
+                                    </div>
+                                </a>
+
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-            <div class="menu-right"></div>
+            <div class="menu-right col-md-8">
+
+                <div class="menu-right-top  tb-box ">
+                    <div class="tb-row">
+                        <div class="tb-col tb-mt ">
+                            <p class="">一级菜单：官网下载</p>
+                        </div>
+                        <div class="tb-col tb-mt text-right">
+                            <a href="javascript:void(0);" class="bl-a">重命名</a>
+                            <a href="javascript:void(0);" class="bl-a">删除</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+
+                    <!-- 菜单没有配置的情况 -->
+                    <div class="menu-types">
+                        <p class="dc">请选择订阅者点击“官网下载”菜单后，公众号做出的响应动作</p>
+                        <div>
+                            <a class="ib " href="javascript:void(0);">
+                                <i class="block icon-menu-addsub icon-menu"></i>
+                                添加二级菜单
+                            </a>
+                            <a class="ib " href="javascript:void(0);">
+                                <i class="block icon-menu-message icon-menu"></i>
+                                添加二级菜单
+                            </a>
+                            <a class="ib" href="javascript:void(0);">
+                                <i class="block icon-menu-url icon-menu"></i>
+                                添加二级菜单
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 没有点击情况  -->
+                    <!--<div class="no-menu-select">-->
+                        <!--<p>-->
+                            <!--你可以点击左侧菜单或添加一个新菜单，然后设置菜单响应动作-->
+                        <!--</p>-->
+                    <!--</div>-->
+
+                </div>
+
+            </div>
         </div>
 
         <div class="menu-bottom">
