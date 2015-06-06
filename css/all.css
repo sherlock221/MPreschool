@@ -88,6 +88,16 @@
   .icon-menu-url:hover {
     background-position: 0 -620px; }
 
+.icon-fun {
+  background-image: url("../imgs/icon/icon_menu_function.png");
+  width: 18px;
+  height: 18px; }
+
+.icon-manager {
+  background-image: url("../imgs/icon/icon_menu_management.png");
+  width: 18px;
+  height: 18px; }
+
 .s1_header_top {
   background-image: url("../imgs/s1_8_header_bg.png");
   width: 100%;
@@ -100,31 +110,54 @@
   width: 11.05067rem;
   height: 4.032rem; }
 
+body {
+  background: #e7e8eb; }
+
 header {
-  background-color: #ffa92d;
-  height: 82px; }
-  header .logo {
-    width: 500px;
-    margin-top: 20px; }
-    header .logo img {
-      width: 100px; }
-    header .logo .left-text {
-      font-size: 26px; }
-  header .userinfo {
-    width: 240px;
-    margin-top: -30px;
-    float: right; }
-    header .userinfo img {
-      width: 60px; }
-    header .userinfo .right-text {
-      font-size: 16px; }
+  background-color: #fff;
+  height: 60px;
+  border-bottom: 1px solid #d9dadc; }
+
+.bodyContent {
+  padding: 36px 0; }
+
+.right-content {
+  background: #fff;
+  padding-right: 0;
+  padding-left: 0;
+  border: 1px solid #e7e7eb;
+  vertical-align: top;
+  width: 50%; }
+
+.left-content {
+  width: 10%;
+  vertical-align: top;
+  background: white;
+  border: 1px solid #e7e7eb;
+  border-right: none; }
+
+.sc-table {
+  display: table-row; }
+  .sc-table .sc-table-col {
+    display: table-cell; }
+
+.right-content-top {
+  border-bottom: 1px solid #e7e7eb; }
+  .right-content-top h2 {
+    font-size: 16px;
+    padding: 0 30px;
+    line-height: 75px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0; }
+
+.right-content-wrap {
+  padding: 30px; }
 
 .container {
   width: 1200px;
-  margin: 0 auto; }
-
-.text-default {
-  color: #ffffff; }
+  margin: 0 auto;
+  height: inherit; }
 
 .ib {
   display: inline-block; }
@@ -159,6 +192,28 @@ footer {
   footer .text-center {
     text-align: center; }
 
+.nav-list {
+  padding-top: 13px;
+  background: #fff; }
+  .nav-list .nav-title {
+    position: relative;
+    padding: 7px 30px 7px;
+    width: auto;
+    color: #8d8d8d; }
+    .nav-list .nav-title i {
+      margin-right: 10px; }
+  .nav-list .nav-item {
+    line-height: 34px; }
+    .nav-list .nav-item:hover {
+      background: #f4f5f9; }
+    .nav-list .nav-item.active {
+      background-color: #44b549;
+      color: #fff; }
+    .nav-list .nav-item a {
+      display: block;
+      padding: 0 0 0 58px;
+      width: auto; }
+
 a {
   color: inherit; }
   a:hover {
@@ -192,6 +247,10 @@ i {
 /**
  * sherlock221b
  */
+.msg_tips {
+  margin-bottom: 20px;
+  color: #8d8d8d; }
+
 .menu-layer {
   border: 1px solid #e7e7eb;
   background-color: #fff; }

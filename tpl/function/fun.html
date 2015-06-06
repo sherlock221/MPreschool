@@ -1,4 +1,6 @@
-<div class="container">
-    <div ng-include="'tpl/common/nav.html'"></div>
-    <section ui-view></section>
+<div class="container bodyContent ">
+    <section class="sc-table">
+        <div   ng-include="'tpl/common/nav.html'" class="sc-table-col left-content"></div>
+        <section ui-view class="sc-table-col  right-content"></section>
+    </section>
 </div>

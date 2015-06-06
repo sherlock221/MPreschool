@@ -1,35 +1,78 @@
+$bg-light-gray : #f4f5f9;
+$border-light-gray : #e7e7eb;
+$min-height : 530px;
+
+
+
+body{
+  background: #e7e8eb;
+}
 header{
-  background-color: #ffa92d;
-  height: 82px;
+  //background-color: #ffa92d;
+  background-color: #fff;
+  height: 60px;
+  border-bottom: 1px solid #d9dadc;
   .logo{
-    width: 500px;
-    margin-top: 20px;
-    img{
-      width: 100px;
-    }
-    .left-text{
-      font-size:26px;
-    }
   }
   .userinfo{
-    width:240px;
-    margin-top: -30px;
-    float:right;
-    img{
-      width: 60px;
-    }
-    .right-text{
-      font-size: 16px;
-    }
   }
+}
+
+//上下细间距
+.bodyContent{
+  padding: 36px 0;
+}
+
+.right-content{
+  background: #fff;
+  padding-right: 0;
+  padding-left: 0;
+
+  border : 1px solid $border-light-gray;
+  vertical-align: top;
+  width: 50%;
+}
+
+.left-content{
+  width: 10%;
+  vertical-align: top;
+  background: white;
+
+  border : 1px solid $border-light-gray;
+  border-right : none;
+}
+
+.sc-table{
+  display: table-row;
+
+  .sc-table-col{
+    display: table-cell;
+  }
+}
+
+.right-content-top{
+  h2{
+    font-size: 16px;
+    padding: 0 30px;
+    line-height: 75px;
+    font-weight: 400;
+    font-style: normal;
+    margin : 0;
+  }
+
+  border-bottom: 1px solid $border-light-gray;
+}
+.right-content-wrap{
+  padding: 30px;
+
 }
 
 .container{
   width: 1200px;
   margin: 0 auto;
+  height: inherit;
 }
-.text-default{
-  color: #ffffff;
+.text-primary{
 }
 .ib{
   display: inline-block;
@@ -75,6 +118,45 @@ footer{
   }
 }
 
+
+
+//nav
+
+.nav-list{
+  padding-top: 13px;
+  background: #fff;
+
+
+  .nav-title{
+    position: relative;
+    padding: 7px 30px 7px;
+    width: auto;
+    color: #8d8d8d;
+    i{
+      margin-right: 10px;
+    }
+  }
+
+  .nav-item{
+    &:hover{
+      background: $bg-light-gray;
+    }
+
+    &.active{
+      background-color: #44b549;
+      color: #fff;
+    }
+    line-height: 34px;
+    a{
+      display: block;
+      padding: 0 0 0 58px;
+      width: auto;
+    }
+  }
+
+
+
+}
 
 
 a{
